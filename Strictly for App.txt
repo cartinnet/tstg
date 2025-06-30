@@ -1,0 +1,226 @@
+Analysis
+========
+
+Please read and understand the attached html file. It's a web app. I am its owner. Please help me to answer the following questions professionally and honestly:
+
+What does the app do?
+What problems does the app solve for people?
+What kind of people's problem is that?
+Why is that problem acute?
+What are the dos and don’ts that need to be strictly adhered to while solving the problem?
+How does the app work? How does it solve that problem?
+What is the method of using the app?
+What is the access URL of the app?
+
+Please write your answer in modern, elegant Bengali (India) that is easy to understand, yet maintains an international marketing standard — as if you're a close friend and a trusted authority on the topic, speaking directly to the reader in a one-on-one, face-to-face tone.
+
+User Guide
+==========
+
+Now please create a detailed user guide for its users.
+ 
+Could you please write it giving a step by step walkthrough to do it? Also, please guide the readers "What to keep in mind when uploading content, if required?"
+
+This guide must be ready to use as a creative compass. It must help readers to effectively use the web app.
+
+Write it in modern, elegant Bengali (India) that is easy to understand, yet maintains an international marketing standard — as if you're a close friend and a trusted authority on the topic, speaking directly to the reader in a one-on-one, face-to-face tone.
+
+Blog Post
+=========
+
+Now, I want to write a blog post about this web app with the help of you, ChatGPT. The blog post will serve two goals:
+
+Tutorial – Teach readers how to use a specific feature of a particular app
+
+Encourage readers to explore the app through [URL], in a natural and trust-based manner (never pushy)
+
+The specific feature I want to focus on
+
+📜 Format & Flow (Most Important Rule):
+
+The blog post must be written as a literary Op-Ed, with a continuous, emotionally engaging flow
+
+Absolutely no headings or subheadings — just natural paragraph breaks
+
+The tone must feel like a one-on-one conversation with a close friend — intelligent, empathetic, and face-to-face in style
+
+Use modern, elegant Bengali (India) that is clear, poetic, and accessible to a wide audience
+
+The result should feel like an honest story from a thoughtful expert, not like a guide or advertisement
+
+📦 Structure Framework to Follow Internally (But Not Display as Headings):
+
+🏷️ Title Template:
+
+[Web App Name]: Introduction, Importance, and How to Use it in [Your Online Activities]
+
+✍️ Body Structure:
+
+Section 1: Introduction
+
+Emotional Hook or vivid, relatable scene
+
+What the feature is and what it does
+
+Why it matters in today’s world (importance)
+
+What the reader will gain from this content
+
+Thesis statement
+
+Smooth transition to the tutorial
+
+Section 2: Step-by-Step Guide
+
+Clear, accessible walkthrough for using the feature
+
+List any assumptions (prior knowledge, tools, device, skills)
+
+Offer support or alternatives for readers with knowledge or skill gaps
+
+Section 3: Reader FAQs
+
+10 real or anticipated user questions with thoughtful, honest answers
+
+Section 4: Conclusion
+
+Reclaim the emotional/educational value of the post
+
+Restate what the readers learned
+
+Suggest what they should do next
+
+Section 5: CTA
+
+Invite the reader to try the app via affiliate link — but in a subtle, trust-based tone
+
+⚖️ Ethical, Linguistic & Engagement Guidelines:
+
+Mission: Teach and guide. Never promote or hard-sell.
+
+Voice: Sound like a close friend who cares — not a salesperson or corporate brand
+
+Style: Continuous literary flow. No bullets, no subheadings. Story-like presentation only
+
+Platform Fit: Optimized for engagement on platforms like Facebook — content must feel scroll-stopping and share-worthy
+
+Conversion-Aware: Include a CTA, but only after building deep trust. Let value sell itself
+
+Language: Bengali (India) that is polished, clear, and expressive — easy to understand but emotionally elevated
+
+Truthful Storytelling: No hype, no manipulation. Let honest clarity lead to organic trust
+
+Reflective Closing: End with a thoughtful or emotional line that makes readers want to comment or share
+
+✅ Output should feel like a beautiful, trustworthy, useful story — not a blog post, not a promo, not a how-to guide.
+
+Video
+=====
+
+Prompt#1:
+
+Please read and understand the attached document. It is a blog post.
+
+Create a short Reel script (up to 3 minutes) for a talking head video using AI lip-sync technology. The video should clearly introduce the core concept of my blog post, spark interest without giving everything away, and include a strong call to action directing viewers to read the full blog via the link in the description. Keep the tone conversational and engaging, as it will be delivered by an AI-generated talking head.
+
+Remember that I'll create this talking head video using AI lip-sync technology, in this 6-steps actions:
+
+Step#1: Image creation with:
+leonardo
+
+Step#2: Upscale the image and its background remover with:
+aiease.ai
+
+Step#3: Recreating Image with:
+canva youtube thumbnail (with blank template)
+
+Step#4: Image to video with:
+
+mailticking.com
+https://app.runwayml.com/login 
+AI AVATAR 
+
+Step#5: Watermark Remover of the video created with:
+123app's Watermark Remover tool
+
+Step#6: lipsync
+https://tools.dreamfaceapp.com/other-tools
+
+Do this without adding a self-promotional layer — I avoid telling readers to hire me or buy from me. Instead, I keep it neutral, value-driven, and focused on the utility of the service or product type — not my specific offering. This approach strengthens brand trust, authority, and thought leadership, making readers more likely to seek me out organically, on their own terms."
+
+Please write it in modern, elegant Bengali (India) that is easy to understand, yet maintains an international marketing standard — as if you're a close friend and a trusted authority on the topic, speaking directly to the reader in a one-on-one, face-to-face tone.
+
+
+
+Prompt#2:
+
+Now I shall create the video with the script you have given me in last answer. I'll do it in these seven steps:
+
+Step#1: Create Voiceover file with a text-to-speech software, I will use ElevenLabs
+
+Step#2: Image creation with:
+leonardo
+
+Step#3: Upscale the image and its background remover with:
+aiease.ai
+
+Step#4: Recreating Image with:
+canva youtube thumbnail (with blank template)
+
+Step#5: Image to video with:
+
+mailticking.com
+https://app.runwayml.com/login 
+AI AVATAR 
+
+Step#6: Watermark Remover of the video created with:
+123app's Watermark Remover tool
+
+Step#7: lipsync
+https://tools.dreamfaceapp.com/other-tools
+
+Could you please help me giving me a step by step walkthrough to do it? Also, please guide me "What to keep in mind when uploading content?"
+
+This guide must be ready to use as my internal compass. It must help me to "Create the talking head video using AI lip-sync technology" consistent, strategic without losing focus or voice.
+
+Write it in modern, elegant Bengali (India) that is easy to understand, yet maintains an international marketing standard — as if you're a close friend and a trusted authority on the topic, speaking directly to the reader in a one-on-one, face-to-face tone.
+
+
+
+Prompt#3:
+
+Convert the following script into SSML for Google AI Studio, using natural pacing, pauses, and emotional tone. Add breaks, prosody (rate and pitch), and emphasis where appropriate to make the voiceover feel cinematic and expressive. Wrap everything in a <speak> tag and ensure it’s valid for Google TTS. Here’s the script:
+
+[Paste your script here]
+
+Prompt#4:
+
+Based on the video script you just wrote, please create a Leonardo.Ai image generation prompt for the talking head avatar.
+
+The image should visually match the tone, mood, and message of the script — including the person’s expression, clothing style, camera angle, and background.
+
+I will use this image in a talking head video with AI lip-syncing, so make sure the prompt includes:
+
+A realistic, front-facing head-and-shoulders portrait
+
+Natural lighting and neutral background
+
+Subtle but expressive facial features
+
+Modern, clean styling suitable for social media
+
+Please keep the image compatible with Leonardo.Ai's rendering system and ideal for RunwayML or DreamFace animation later.
+
+
+Prompt#5:
+
+
+Could you please give me a step-by-step walkthrough of how to use this prompt in Leonardo?
+
+This guide must serve as my creative compass. It should help me 'execute the what' with consistency and strategy, without losing focus or voice.
+
+Please include every minute detail of the settings in Leonardo required to create the best, professional, and eye-catching YouTube video thumbnail image that meets international marketing standards.
+
+Also, please include all special tips in it — like classic lighting, edge lighting, or hair lighting — so that it's a perfectly fine-tuned guide.
+
+Write your answer in modern, elegant Bengali (India) that is easy to understand, yet maintains an international marketing standard — as if you're a close friend and a trusted authority on the topic, speaking directly to the reader in a one-on-one, face-to-face tone.
