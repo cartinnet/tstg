@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <title>SPM Studio | প্রফেশনাল ওয়েবসাইট ডিজাইন সার্ভিস</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="spm.ico" />
+  <style>
+    :root {
+      --brand-blue: #2a4f6e;
+      --brand-gold: #d9a441;
+      --brand-bg: #f4f9fb;
+      --brand-dark: #1b1b1b;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --border-color: #e0e0e0;
+      --success-color: #28a745;
+      --danger-color: #dc3545;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      background: var(--brand-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding-bottom: 80px; 
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: var(--card-bg);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--brand-blue);
+    }
+    .logo img {
+      height: 40px;
+    }
+    header nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: var(--brand-blue);
+        font-weight: 500;
+    }
+
+    .main-layout {
+        display: flex;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    .content-column {
+        flex: 2;
+        min-width: 0;
+    }
+    .sidebar-column {
+        flex: 1;
+        position: relative;
+    }
+    
+    .gig-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--brand-blue);
+    }
+
+    .gig-gallery {
+        margin-bottom: 40px;
+    }
+    .main-image img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .content-section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+    .content-section h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: var(--brand-blue);
+      border-bottom: 2px solid var(--brand-gold);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .gig-description ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .gig-description li {
+        padding-left: 25px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .gig-description li::before {
+        content: '✓';
+        color: var(--brand-gold);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+    }
+    
+    .price-card-sticky {
+        position: sticky;
+        top: 20px;
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+    .price-card-sticky h3 {
+        color: var(--brand-blue);
+        margin-top: 0;
+    }
+    .price-card-sticky #package-select-wrapper {
+        margin: 15px 0;
+    }
+    .price-card-sticky select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      font-size: 16px;
+    }
+    .price-card-sticky button {
+      background: var(--brand-gold);
+      color: var(--brand-dark);
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+    .price-card-sticky button:hover {
+      background: #c9a033;
+    }
+
+    .package-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .package-card {
+      background: var(--brand-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .package-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(42, 79, 110, 0.15);
+    }
+    .package-card h3 { margin-top: 0; color: var(--brand-blue); font-size: 22px; }
+    .package-card ul { list-style: none; padding: 0; margin: 20px 0; text-align: left; flex-grow: 1; }
+    .package-card li { display: flex; align-items: center; margin-bottom: 12px; font-size: 15px; }
+    .package-card li .icon { margin-right: 10px; font-weight: bold; font-size: 18px; }
+    .icon.check { color: var(--success-color); }
+    .icon.cross { color: var(--danger-color); }
+    .package-card .price { font-size: 28px; font-weight: bold; margin: 20px 0; color: var(--brand-blue); }
+    .package-card button { background: var(--brand-blue); color: #fff; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background-color 0.3s; }
+    .package-card button:hover { background: #1e3a52; }
+    .package-card.popular { border-top: 4px solid var(--brand-gold); }
+    
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .testimonial-card { background: var(--brand-bg); border-radius: 10px; padding: 25px; border: 1px solid var(--border-color); }
+    .testimonial-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+    .testimonial-header img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+    .testimonial-author span { display: block; font-weight: bold; color: var(--brand-blue); }
+    .testimonial-card p { margin: 0; font-style: italic; color: #555; quotes: "“" "”"; }
+    .testimonial-card p::before { content: open-quote; }
+    .testimonial-card p::after { content: close-quote; }
+
+    .faq details { border-bottom: 1px solid var(--border-color); padding: 15px 5px; }
+    .faq summary { cursor: pointer; font-weight: bold; list-style: none; position: relative; padding-right: 25px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; position: absolute; right: 5px; font-size: 20px; color: var(--brand-gold); }
+    .faq details[open] summary::after { content: '−'; }
+    .faq p { margin-top: 10px; padding-left: 5px; }
+
+    .sweet-ending { background: linear-gradient(135deg, var(--brand-blue), #1e3a52); color: #fff; padding: 50px 20px; text-align: center; border-radius: 12px; margin: 40px 0; }
+    .sweet-ending h2 { margin-top: 0; font-size: 28px; }
+    .sweet-ending p { max-width: 600px; margin: 15px auto 0; opacity: 0.9; }
+
+    footer { background: var(--brand-dark); color: #ccc; text-align: center; padding: 25px; font-size: 14px; margin-top: 40px; }
+
+    #translate-btn { position: fixed; bottom: 20px; right: 20px; background: var(--brand-gold); color: var(--brand-dark); border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; cursor: pointer; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    #google_translate_element { position: fixed; bottom: 80px; right: 20px; z-index: 9999; }
+    
+    #mobile-cta-bar { display: none; }
+
+    @media(max-width: 992px) {
+      .main-layout {
+        flex-direction: column;
+      }
+      .price-card-sticky {
+        position: static;
+      }
+      /* 
+        THE FIX: The `order: -1` property for `.sidebar-column` was here. It has been removed.
+        Now the content flows in the correct, logical order on mobile devices.
+      */
+      
+      #mobile-cta-bar { display: block; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); padding: 10px 15px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 1000; }
+      #mobile-cta-bar button { width: 100%; background: var(--brand-gold); color: var(--brand-dark); border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 18px; }
+      #translate-btn { bottom: 95px; }
+      #google_translate_element { bottom: 155px; }
+    }
+    @media(max-width: 768px) {
+        body { padding-bottom: 70px; }
+        header { flex-direction: column; gap: 15px; padding: 20px; }
+        .gig-title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<button id="translate-btn" title="Translate this page">🌐</button>
+<div id="google_translate_element"></div>
+
+<header>
+  <div class="logo">
+    <img src="https://api.iconify.design/logos:figma.svg?color=%232a4f6e" alt="SPM Studio Logo">
+    <span>SPM Studio</span>
+  </div>
+  <nav>
+    <a href="#services">প্যাকেজ</a>
+    <a href="#testimonials">মতামত</a>
+    <a href="#faq">প্রশ্ন</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="main-layout">
+    
+    <div class="content-column">
+      <h1 class="gig-title">আপনার স্বপ্নের ওয়েবসাইট তৈরি করুন, এখন আরও সহজে</h1>
+      
+      <section class="gig-gallery" id="gallery">
+          <div class="main-image">
+              <img src="https://placehold.co/800x450/2a4f6e/ffffff?text=Your+Future+Website" alt="Professional Website Design">
+          </div>
+      </section>
+
+      <section class="content-section gig-description" id="description">
+        <h2>সেবা বিবরণ</h2>
+        <p>৫ বছরেরও বেশি অভিজ্ঞতার সাথে, আমরা আপনার ব্যবসার জন্য একটি প্রফেশনাল, দ্রুত এবং ইউজার-ফ্রেন্ডলি ওয়েবসাইট তৈরি করতে প্রতিশ্রুতিবদ্ধ। প্রতিটি ওয়েবসাইট আধুনিক ডিজাইন নীতি অনুসরণ করে তৈরি করা হয়, যা আপনার ব্র্যান্ডকে অনলাইনে একটি শক্তিশালী পরিচয় দেয়।</p>
+      </section>
+
+      <!-- FLEXIBLE PACKAGE SECTION: Add or remove package-card divs as needed -->
+      <section class="content-section" id="services">
+        <h2>আমাদের প্যাকেজ সমূহ</h2>
+        <div class="package-row">
+          
+          <div class="package-card" data-package-id="basic">
+            <h3>Basic</h3>
+            <div class="price">₹ ৩,০০০</div>
+            <ul>
+              <li><span class="icon check">✅</span> ১ পেজ ডিজাইন</li>
+              <li><span class="icon check">✅</span> মোবাইল রেসপন্সিভ</li>
+              <li><span class="icon cross">❌</span> SEO অপ্টিমাইজেশন</li>
+              <li><span class="icon cross">❌</span> সাপোর্ট</li>
+            </ul>
+            <button onclick="orderPackage('basic')">এই প্যাকেজটি কিনুন</button>
+          </div>
+          
+          <div class="package-card popular" data-package-id="standard">
+            <h3>Standard</h3>
+            <div class="price">₹ ৫,০০০</div>
+            <ul>
+              <li><span class="icon check">✅</span> ৫ পেজ পর্যন্ত ডিজাইন</li>
+              <li><span class="icon check">✅</span> মোবাইল রেসপন্সিভ</li>
+              <li><span class="icon check">✅</span> বেসিক SEO</li>
+              <li><span class="icon check">✅</span> ১ মাস টেকনিক্যাল সাপোর্ট</li>
+            </ul>
+            <button onclick="orderPackage('standard')">এই প্যাকেজটি কিনুন</button>
+          </div>
+          
+          <div class="package-card" data-package-id="premium">
+            <h3>Premium</h3>
+            <div class="price">₹ ১০,০০০</div>
+            <ul>
+              <li><span class="icon check">✅</span> ১০ পেজ পর্যন্ত ডিজাইন</li>
+              <li><span class="icon check">✅</span> মোবাইল রেসপন্সিভ</li>
+              <li><span class="icon check">✅</span> সম্পূর্ণ SEO প্যাকেজ</li>
+              <li><span class="icon check">✅</span> ৩ মাস পূর্ণ সাপোর্ট</li>
+            </ul>
+            <button onclick="orderPackage('premium')">এই প্যাকেজটি কিনুন</button>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="content-section" id="testimonials">
+        <h2>ক্লায়েন্টদের মতামত</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card"> <div class="testimonial-header"> <img src="https://placehold.co/100x100/d9a441/ffffff/png" alt="Client Riya"> <div class="testimonial-author"> <span>রিয়া চৌধুরী</span> </div> </div> <p>অসাধারণ সার্ভিস এবং সময়নিষ্ঠ ডেলিভারি। আমার ব্যবসার জন্য ওয়েবসাইটটি খুবই কার্যকর হয়েছে। SPM Studio-কে অনেক ধন্যবাদ!</p> </div>
+            <div class="testimonial-card"> <div class="testimonial-header"> <img src="https://placehold.co/100x100/2a4f6e/ffffff/png" alt="Client Shawon"> <div class="testimonial-author"> <span>শাওন আহমেদ</span> </div> </div> <p>আমি তাদের কাজে খুবই সন্তুষ্ট। ডিজাইন থেকে শুরু করে সাপোর্ট পর্যন্ত সবকিছুই ছিল প্রফেশনাল মানের। অবশ্যই 추천 করছি।</p> </div>
+        </div>
+      </section>
+
+      <section class="content-section faq" id="faq">
+        <h2>সাধারণ প্রশ্ন ও উত্তর</h2>
+        <details> <summary>ওয়েবসাইট তৈরি করতে কত দিন সময় লাগবে?</summary> <p>প্যাকেজের উপর নির্ভর করে সাধারণত বেসিক সাইটের জন্য ৩-৫ দিন, স্ট্যান্ডার্ড সাইটের জন্য ৭-১০ দিন এবং প্রিমিয়াম সাইটের জন্য ১০-১৫ কার্যদিবস সময় লাগে।</p> </details>
+        <details> <summary>আমি কীভাবে পেমেন্ট করব?</summary> <p>আমরা ব্যাংক ট্রান্সফার, মোবাইল ব্যাংকিং (বিকাশ, নগদ), PayPal এবং আন্তর্জাতিক কার্ডের মাধ্যমে পেমেন্ট গ্রহণ করি।</p> </details>
+        <details> <summary>ডোমেইন এবং হোস্টিং কি প্যাকেজের অন্তর্ভুক্ত?</summary> <p>না, ডোমেইন এবং হোস্টিং প্যাকেজের অন্তর্ভুক্ত নয়। তবে আপনার প্রয়োজন হলে আমরা সেরা ডোমেইন ও হোস্টিং কিনতে আপনাকে সহায়তা করতে পারি।</p> </details>
+      </section>
+    </div>
+
+    <!-- This sidebar now correctly appears AFTER the main content on mobile -->
+    <div class="sidebar-column">
+      <div class="price-card-sticky">
+        <div id="package-select-wrapper">
+            <h3>আপনার প্যাকেজ বাছাই করুন</h3>
+            <select id="packageSelect"></select>
+        </div>
+        <button onclick="orderFromSidebar()">অর্ডার করুন</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="sweet-ending">
+      <h2>💙 আপনার স্বপ্নের ওয়েবসাইট আর দূরে নয়!</h2>
+      <p>SPM Studio আপনার ডিজিটাল যাত্রায় বিশ্বস্ত সঙ্গী হতে প্রস্তুত। আজই আপনার প্রজেক্ট নিয়ে আমাদের সাথে কথা বলুন।</p>
+  </section>
+</main>
+
+<div id="mobile-cta-bar">
+  <button onclick="orderFromSidebar()">এখনই অর্ডার করুন</button>
+</div>
+
+<footer>
+  &copy; <script>document.write(new Date().getFullYear())</script> SPM Studio | All Rights Reserved | Privacy Policy
+</footer>
+
+<script>
+  const cartUrls = {
+    basic: 'carturl1',
+    standard: 'carturl2',
+    premium: 'carturl3'
+  };
+
+  function orderPackage(packageId) {
+    if (cartUrls[packageId]) {
+      window.location.href = cartUrls[packageId];
+    } else {
+      console.error('Invalid package ID:', packageId);
+    }
+  }
+
+  function orderFromSidebar() {
+    const packageSelect = document.getElementById('packageSelect');
+    const selectedPackageId = packageSelect.value;
+    
+    if (selectedPackageId) {
+      orderPackage(selectedPackageId);
+    } else {
+      const numPackages = document.querySelectorAll('.package-card').length;
+      if (numPackages > 1) {
+        alert("অনুগ্রহ করে একটি প্যাকেজ নির্বাচন করুন!");
+      } else {
+         const singlePackage = document.querySelector('.package-card');
+         if(singlePackage) {
+             orderPackage(singlePackage.dataset.packageId);
+         }
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const packageCards = document.querySelectorAll('.package-card');
+    const selectWrapper = document.getElementById('package-select-wrapper');
+    const packageSelect = document.getElementById('packageSelect');
+    
+    if (packageCards.length === 0) {
+        document.querySelector('.price-card-sticky').style.display = 'none';
+        return;
+    }
+
+    if (packageCards.length <= 1) {
+        selectWrapper.style.display = 'none';
+        if(packageCards.length === 1) {
+            packageSelect.value = packageCards[0].dataset.packageId;
+        }
+    } else {
+        selectWrapper.style.display = 'block';
+        
+        const placeholder = document.createElement('option');
+        placeholder.value = "";
+        placeholder.textContent = "-- নির্বাচন করুন --";
+        packageSelect.appendChild(placeholder);
+
+        packageCards.forEach(card => {
+            const option = document.createElement('option');
+            const packageId = card.dataset.packageId;
+            const packageName = card.querySelector('h3').textContent;
+            const packagePrice = card.querySelector('.price').textContent;
+            
+            option.value = packageId;
+            option.textContent = `${packageName} - ${packagePrice}`;
+            packageSelect.appendChild(option);
+        });
+    }
+  });
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage:'bn', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+  document.getElementById('translate-btn').addEventListener('click', function() {
+    var translateContainer = document.getElementById('google_translate_element');
+    if(translateContainer.style.display === 'block') {
+        translateContainer.style.display = 'none';
+    } else {
+        translateContainer.style.display = 'block';
+    }
+    if (!window.googleTranslateScriptAdded) {
+      window.googleTranslateScriptAdded = true;
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      document.body.appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
